@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="../AutopesulaTellimused.WpfApp/AutopesulaTellimused.WpfApp.csproj" />
+  <Project Path="AutopesulaTellimused.Core.csproj" />
+</Solution>
