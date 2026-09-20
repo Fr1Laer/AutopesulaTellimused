@@ -136,9 +136,24 @@ namespace AutopesulaTellimused.WpfApp
             if (result == MessageBoxResult.Yes)
             {
                 _orders.Remove(selectedOrder);
+
+                ReindexOrders();
+
                 ClearInputs();
                 UpdateTotals();
             }
+        }
+
+        private void ReindexOrders()
+        {
+            for (int i = 0; i < _orders.Count; i++)
+            {
+                _orders[i].Id = i + 1;
+            }
+
+            _nextId = _orders.Count + 1;
+
+            OrdersDataGrid.Items.Refresh();
         }
 
         private void ClearInputs()
